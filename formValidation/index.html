@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>formValidation</title>
+    <link rel="stylesheet" href="/formValidation/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <form action="">
+        <i class="fa-brands fa-telegram"></i>
+        <div class="input-group">
+          <label for="name">Full Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            onkeyup="validateName()"
+            placeholder="Enter your full name"
+          />
+          <span id="name-error"></span>
+        </div>
+
+        <div class="input-group">
+          <label for="phone">Phone No.</label>
+          <input
+            type="tel"
+            name="phone"
+            id="phone"
+            onkeyup="validatePhone()"
+            placeholder="123 456 7890"
+          />
+          <span id="phone-error"></span>
+        </div>
+
+        <div class="input-group">
+          <label for="email">Email Id</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            onkeyup="validateEmail()"
+            placeholder="Enter your email"
+          />
+          <span id="email-error"></span>
+        </div>
+
+        <div class="input-group">
+          <label for="message"></label>
+          <textarea
+            rows="5"
+            name="message"
+            id="message"
+            onkeyup="validateMessage()"
+            placeholder="Enter your message"
+          ></textarea>
+          <span id="message-error"> </span>
+        </div>
+
+        <button type="submit" onclick="return validateForm()">Submit</button>
+        <span id="submit-error"> </span>
+      </form>
+      <!-- <div class="useful-links">
+        <a href="https://youtu.be/fz8bwvn9lA4">Watch Video</a>
+        <a
+          href="https://www.youtube.com/c/EasyTutorialsVideo?sub_confirmation=1"
+          >Visit Channel</a
+        >
+      </div> -->
+    </div>
+    <script src="/formValidation/index.js"></script>
+  </body>
+</html>
